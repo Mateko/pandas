@@ -617,7 +617,7 @@ cpdef array_to_datetime(
                     check_dts_bounds(&dts)
 
             else:
-                raise TypeError(f"{type(val)} is not convertible to datetime")
+                raise ValueError(f"{val} is not convertible to datetime")
 
             cnp.PyArray_MultiIter_NEXT(mi)
 
